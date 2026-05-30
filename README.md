@@ -161,7 +161,7 @@ Refer to `.env.example` for reference.
 
 
 
-### Run FastAPI Server
+# 6. Run FastAPI Server
 
 ```bash
 uvicorn main:app --reload
@@ -190,7 +190,7 @@ Ensure backend is running, then open:
 
 
 
-# Usage
+# 8. Usage
 
 ### Add Contact
 
