@@ -22,7 +22,7 @@ cd supplier-contact-log
 ### Create environment
 
 ```bash
-python3 -m venv venv
+py -3.11 -m venv venv
 ```
 
 ### Activate
@@ -65,6 +65,19 @@ psql --version
 
 If not found, install PostgreSQL and ensure `psql` is in PATH.
 
+**Solution:** Add psql to PATH
+
+If PostgreSQL is already installed:
+
+1. Open:
+      - System Properties → Environment Variables
+      - Under System Variables → Path → Edit
+
+2. Add: `C:\Program Files\PostgreSQL\<version>\bin`
+
+3. Restart PowerShell
+
+`Note:` Replace `<version>` with your PostgreSQL version
 
 
 ### Create database
@@ -148,16 +161,22 @@ Refer to `.env.example` for reference.
 
 
 
-# 6. Run FastAPI Server
+### Run FastAPI Server
 
 ```bash
 uvicorn main:app --reload
 ```
 
-Server runs at:
+Server will start at:
 
 ```
 http://127.0.0.1:8000
+```
+
+API documentation is available at:
+
+```
+http://127.0.0.1:8000/docs
 ```
 
 
